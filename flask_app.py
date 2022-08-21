@@ -1,7 +1,8 @@
 from flask import Flask
+from makeupsafe import escape
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/home")
 def hello_world():
-    return "<p>Hello, BABA!</p>"
+    return f"<p>Hello, {escape(name)}</p>"
